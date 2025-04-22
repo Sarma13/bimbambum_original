@@ -1,0 +1,14 @@
+# Repositories
+.DS_Store
+*build*/
+pybind11*/
+.idea/
+
+# Compiled Python files
+Python_Code/__pycache__
+Python_Code/*cpython*
+Python_Code/*.pyc
+
+# Output and input txt files
+Python_Code/*.txt
+

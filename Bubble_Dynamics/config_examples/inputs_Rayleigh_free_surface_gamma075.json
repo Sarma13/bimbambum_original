@@ -1,0 +1,29 @@
+{
+  "//": "File: inputs.json",
+  "//": "Descrtiption: Inputs reading file for BIM solver (cpp version)",
+  "//": "Author: Armand Sieber",
+  "//": "Copyright: EPFL 2020",
+  "//": "",
+  "//": "",
+  "//": "",
+  "Bubble data": {
+    "Nb": 80,
+    "Ns": 60,
+    "bubble_dynamics": "Rayleigh_Bubble",
+    "zeta": 0.0,
+    "gamma": 0.75,
+    "alpha": 1000.0,
+    "epsilon": 100,
+    "k": 1.4,
+    "surface_elasticity": "false",
+    "sigma_s": 0.1,
+    "boundary": "from_code"
+  },
+  "Solver parameters": {
+    "temporal_solver": "RK2",
+    "dumper_filename": "free_surface_Rayleigh_gamma075.txt",
+    "delta_phi": "1.0e-2",
+    "filtering_freq": 8,
+    "n_threads": 1
+  }
+}
