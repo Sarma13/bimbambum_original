@@ -78,6 +78,7 @@ int main(int argc, const char **argv) {
 
     // Bubble initial conditions
     if (data.bubble_dynamics == "Rayleigh_Bubble") { // initial bubble properties taken from Rayleigh model
+        std::cout<< "Rayleigh_Bubble" << std::endl;
         bubble = std::make_unique<Case_RayleighBubble>(data);
         bubble->initialize();
     } else if (data.bubble_dynamics ==

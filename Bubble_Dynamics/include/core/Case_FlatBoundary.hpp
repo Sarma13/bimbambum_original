@@ -36,34 +36,22 @@
 
 */
 
+
 #ifndef CASE_FLATBOUNDARY_HPP
 #define CASE_FLATBOUNDARY_HPP
 
 #include "BoundaryData.hpp"
+#include "Inputs.hpp"
+
 
 class Case_FlatBoundary : public BoundaryData {
-public:
-    template<typename Input>
-    Case_FlatBoundary(Input &data): BoundaryData(data) {}
-
-    virtual ~Case_FlatBoundary() {}
-
-    /*! \brief Initializes fluid-fluid interface node points.*/
-    void initialize() override;
-
-    /*! \brief Redistributes the node points position along fluid-fluid interface. */
-    void remesh_boundary() override;
-
-    /*! \brief Filters the fluid-fluid interface. */
-    void filter_boundary() override;
-
-    /*! \brief Estimates the derivatives at the endpoints on the fluid-fluid interface. */
-    void boundary_curvature() override;
-
-    /*! \brief Computes the time step value based on the fluid-fluid interface dynamics*/
-    void boundary_endpoints_derivatives() override;
-
-};
-
-
-#endif //CASE_FLATBOUNDARY_HPP
+    public:
+        explicit Case_FlatBoundary(const Input & data);
+        void initialize() override;
+        void remesh_boundary() override;
+        void filter_boundary() override;
+        void boundary_curvature() override;
+        void boundary_endpoints_derivatives() override;
+    };
+    
+    #endif // CASE_SPHERICALDROPLEcT_HPP
